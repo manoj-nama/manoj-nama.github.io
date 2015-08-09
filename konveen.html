@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EventManager</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/fa.min.css">
+	<link rel="stylesheet" href="css/common-konveen.css">
+
+<script>
+function sendMessage() {
+    if(typeof Ti !== "undefined") {
+        Ti.App.fireEvent("app:web", {data: "Fired from the webview"});
+    }
+}
+</script>
+
+</head>
+<body>
+	<header>
+    	<div class="logo item">&nbsp;</div>
+    	<div class="item center">
+            <a href="#" class="calendar"><span class="icon cal"></span></a>
+        </div>
+		<div class="item right">
+            <div class="btn meeting">
+                <a href="#" onclick="sendMessage()">
+                    <i class="fa fa-plus-circle"></i> Create Meeting
+                </a>
+            </div>         
+        </div>
+    </header>
+    <div id="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Upcoming</a></li>
+                <li><a href="#" class="active">Past</a></li>
+                <li><a href="#">Draft</a></li>
+                <li><a href="#">RSVP</a></li>
+                <li><a href="#">ME</a></li>
+            </ul>
+        </div>
+        
+        <div class="content">
+
+        	<div class="page">
+        		
+        	</div>
+
+        </div>
+    </div>
+</body>
+</html>
